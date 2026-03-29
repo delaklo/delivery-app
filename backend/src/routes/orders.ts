@@ -12,8 +12,8 @@ router.post('/', async (req: Request, res: Response) => {
       return res.status(400).json({ message: 'All fields are required' });
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
       return res.status(400).json({ message: 'Invalid email format' });
-    if (!/^\+?[\d\s\-()]{7,15}$/.test(phone.trim()))
-      return res.status(400).json({ message: 'Invalid phone number' });
+    if (!/^\+?[\d\s\-()]{10,15}$/.test(phone.trim()))
+      return res.status(400).json({ message: 'Invalid phone number (min 10 digits)' });
 
     const order = new Order({
       name,

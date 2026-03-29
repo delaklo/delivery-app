@@ -18,8 +18,8 @@ function validate(data: OrderFormData): FormErrors {
     errors.name = 'Name must be at least 2 characters';
   if (!data.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
     errors.email = 'Enter a valid email address';
-  if (!data.phone.trim() || !/^\+?[\d\s\-()]{7,15}$/.test(data.phone))
-    errors.phone = 'Enter a valid phone number';
+  if (!data.phone.trim() || !/^\+?[\d\s\-()]{10,15}$/.test(data.phone))
+    errors.phone = 'Enter a valid phone number (min 10 digits)';
   if (!data.address.trim() || data.address.trim().length < 5)
     errors.address = 'Address must be at least 5 characters';
   return errors;
