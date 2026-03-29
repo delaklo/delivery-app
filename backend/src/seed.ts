@@ -159,8 +159,13 @@ async function seed() {
     { shopId: mc, name: 'Large Fries',         description: 'Golden crispy french fries',                            price: 59,  imageUrl: friesImgs[0],  category: 'Sides'    },
     { shopId: mc, name: 'Medium Fries',        description: 'Crispy golden fries',                                   price: 45,  imageUrl: friesImgs[1],  category: 'Sides'    },
     { shopId: mc, name: 'Onion Rings',         description: 'Battered and deep-fried onion rings',                   price: 55,  imageUrl: friesImgs[2],  category: 'Sides'    },
-   
-
+    { shopId: mc, name: 'Donut',               description: 'Classic glazed donut',                                  price: 39,  imageUrl: dessertDonut,   category: 'Desserts' },
+    { shopId: mc, name: 'Coca Cola',           description: 'Refreshing cola drink',                                 price: 45,  imageUrl: drinkCola,      category: 'Drinks'   },
+    { shopId: mc, name: 'Sprite',              description: 'Lemon-lime soda',                                       price: 45,  imageUrl: drinkLemonade,  category: 'Drinks'   },
+    { shopId: mc, name: 'Large Fries',         description: 'Golden crispy french fries',                            price: 59,  imageUrl: friesImgs[0],  category: 'Sides'    },
+    { shopId: mc, name: 'Medium Fries',        description: 'Crispy golden fries',                                   price: 45,  imageUrl: friesImgs[1],  category: 'Sides'    },
+    { shopId: mc, name: 'Onion Rings',         description: 'Battered and deep-fried onion rings',                   price: 55,  imageUrl: friesImgs[2],  category: 'Sides'    },
+    { shopId: mc, name: 'Nuggets x6',          description: '6 crispy chicken nuggets',                              price: 79,  imageUrl: chickenImgs[2], category: 'Sides'   },
     // ── CFK Kitchen ────────────────────────────────────────────────────────────
     { shopId: cfk, name: 'Original Box x3',   description: '3 pieces of crispy fried chicken',                      price: 199, imageUrl: chickenImgs[0], category: 'Chicken'  },
     { shopId: cfk, name: 'Original Box x6',   description: '6 pieces of crispy fried chicken, family size',         price: 349, imageUrl: chickenImgs[1], category: 'Chicken'  },
@@ -187,6 +192,11 @@ async function seed() {
     { shopId: cfk, name: 'Pepsi',             description: 'Classic cola drink',                                    price: 45,  imageUrl: drinkCola,      category: 'Drinks'   },
     { shopId: cfk, name: 'Orange Juice',      description: 'Fresh squeezed orange juice',                           price: 65,  imageUrl: drinkOrangeJuice, category: 'Drinks' },
     { shopId: cfk, name: 'Milkshake',         description: 'Rich creamy chocolate shake',                           price: 89,  imageUrl: drinkMilkshake, category: 'Drinks'   },
+    { shopId: cfk, name: 'Apple Pie',         description: 'Warm crispy apple pie',                                 price: 59,  imageUrl: dessertApplePie, category: 'Desserts' },
+    { shopId: cfk, name: 'Waffles',           description: 'Belgian waffles with maple syrup',                      price: 99,  imageUrl: dessertWaffles,  category: 'Desserts' },
+    { shopId: cfk, name: 'Lemonade',          description: 'Fresh squeezed lemonade',                               price: 69,  imageUrl: drinkLemonade,  category: 'Drinks'   },
+    { shopId: cfk, name: 'Iced Tea',          description: 'Refreshing iced tea',                                   price: 59,  imageUrl: drinkIcedTea,   category: 'Drinks'   },
+    { shopId: cfk, name: 'Pepsi',             description: 'Classic cola drink',                                    price: 45,  imageUrl: drinkCola,      category: 'Drinks'   },
 
     // ── Pizza Palace ───────────────────────────────────────────────────────────
     { shopId: pz, name: 'Margherita',         description: 'Tomato, mozzarella, fresh basil',                       price: 229, imageUrl: pizzaImgs[0],   category: 'Pizza'    },
