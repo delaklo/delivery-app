@@ -36,6 +36,7 @@ export default function CartPage() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [orderId, setOrderId] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -59,7 +60,7 @@ export default function CartPage() {
 
     setSubmitting(true);
     try {
-      await api.createOrder({
+      const res = await api.createOrder({
         ...form,
         items: cart.items.map((i) => ({
           productId: i.product._id,
@@ -72,6 +73,7 @@ export default function CartPage() {
         shopId: cart.shopId!,
         shopName: cart.shopName!,
       });
+      setOrderId(res.order._id);
       setSuccess(true);
       clearCart();
     } catch (err) {
@@ -87,7 +89,8 @@ export default function CartPage() {
         <div className="success-overlay">
           <div className="success-icon">✓</div>
           <h2>Order Placed!</h2>
-          <p>
+          <p className="success-order-id">Order ID: <strong>{orderId}</strong></p>
+          <p className="success-message">
             Your order has been received. We'll deliver it as soon as possible.
           </p>
           <Link to="/" className="go-shop-btn">

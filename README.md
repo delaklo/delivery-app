@@ -28,12 +28,5 @@ Live: https://delivery-app-green-nine.vercel.app
 - Order history with search
 - Quick reorder functionality
 
-## Quick Start
 
-```bash
-
-cd backend && npm install && npm run seed && npm run dev
-
-cd frontend && npm install && npm run dev
-```
 
