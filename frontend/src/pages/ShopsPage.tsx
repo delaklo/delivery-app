@@ -55,20 +55,19 @@ export default function ShopsPage() {
     }
   }, []);
 
-  // When shop changes — reset filters and load fresh
   useEffect(() => {
     if (!selectedShop) return;
     setActiveCategory('');
     setSort('');
     setPage(1);
-    // Also fetch all products once to get category list (no limit, but just categories)
+
     api.getProducts(selectedShop._id, { limit: 100 })
       .then(res => setAllCategories([...new Set(res.products.map(p => p.category))]))
       .catch(() => {});
     loadProducts(selectedShop._id, 1, '', '');
   }, [selectedShop, loadProducts]);
 
-  // When filters/sort/page change (but not on shop change — handled above)
+  
   useEffect(() => {
     if (!selectedShop) return;
     loadProducts(selectedShop._id, page, activeCategory, sort);
@@ -109,7 +108,6 @@ export default function ShopsPage() {
   const renderPagination = () => {
     if (!pagination || pagination.totalPages <= 1) return null;
     const { page: cur, totalPages } = pagination;
-    // Show up to 5 page buttons
     const pages: (number | '...')[] = [];
     if (totalPages <= 5) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);

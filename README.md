@@ -9,6 +9,7 @@ Live: https://delivery-app-green-nine.vercel.app
 - **Frontend:** React, TypeScript, Vite
 - **Backend:** Node.js, Express, TypeScript
 - **Database:** MongoDB, Mongoose
+- **Deployment:** Vercel (Frontend), Render (Backend)
 
 ## Main Features
 
