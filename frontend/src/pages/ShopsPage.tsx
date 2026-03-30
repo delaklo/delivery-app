@@ -184,7 +184,7 @@ export default function ShopsPage() {
                   {products.map(p => (
                     <div key={p._id} className="product-card">
                       <img src={p.imageUrl} alt={p.name} className="product-img"
-                        onError={e => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300x150/1e1e1e/555?text=Food'; }} />
+                        onError={e => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400'; }} />
                       <div className="product-body">
                         <h3 className="product-name">{p.name}</h3>
                         <p className="product-desc">📂 {p.category}</p>

@@ -141,7 +141,7 @@ export default function CartPage() {
                   className="cart-item-img"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src =
-                      'https://via.placeholder.com/70/1e1e1e/555?text=🍔';
+                      'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400';
                   }}
                 />
                 <div>
